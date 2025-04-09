@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaleTech</title>
+    <link rel="icon" href="imgs/logo.ico" type="image/x-icon" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #ffffff, #d0eaff, #e0f7fa);
+        min-height: 100vh;
+        padding-bottom: 40px;
+      }
+
+      .header {
+        background: linear-gradient(
+          135deg,
+          rgba(203, 180, 255, 0.6),
+          rgba(208, 234, 255, 0.6)
+        );
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 0 0 20px 20px;
+        color: #000;
+        display: flex; /* Use flexbox to align items side by side */
+        align-items: center; /* Vertically align items */
+        justify-content: flex-start; /* Align items to the left */
+        padding: 30px 20px;
+        margin-bottom: 30px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .header h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        color: #333;
+      }
+      .logo {
+        border-radius: 5px;
+        max-width: 70px;
+        height: auto;
+        margin: 10px;
+      }
+
+      .header p {
+        font-size: 14px;
+        color: #555;
+      }
+
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 30px 10px;
+      }
+
+      .product {
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: left;
+        width: 250px;
+        transition: transform 0.3s ease;
+      }
+
+      .product:hover {
+        transform: translateY(-5px);
+      }
+
+      .img-wrapper {
+        width: 100%;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 12px;
+        margin-bottom: 15px;
+      }
+
+      .productimg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .product h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+
+      .product p {
+        font-size: 15px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .buybutton {
+        width: 100%;
+        background: rgba(128, 0, 128, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(4px);
+        border-radius: 12px;
+        padding: 12px;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: background 0.5s ease;
+      }
+
+      .buybutton:hover {
+        background: linear-gradient(
+          135deg,
+          rgba(203, 180, 255, 0.6),
+          rgba(199, 224, 244, 0.6)
+        );
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transform: scale(1.05);
+        border: white solid 2px;
+        color: #000;
+      }
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        padding: 20px;
+        font-size: 14px;
+        color: #555;
+      }
+
+      footer a {
+        color: #333;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+      .me {
+        color: #201f1f;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img class="logo" src="imgs/logowhite.png" alt="" />
+      <div class="header-text">
+        <h1>TechSpace</h1>
+        <p>Best Tech Shop that has ever existed</p>
+      </div>
+    </div>
+
+    <div class="products">
+      <div class="product">
+        <div class="img-wrapper">
+          <img class="productimg" src="imgs/macbook.jpg" alt="Macbook" />
+        </div>
+        <h2>Macbook Air</h2>
+        <p>
+          Powerful, sleek, and built for performance and whatever you ask for.
+        </p>
+        <p>Price: $1399</p>
+        <button class="buybutton">Buy Now</button>
+      </div>
+
+      <div class="product">
+        <div class="img-wrapper">
+          <img class="productimg" src="imgs/s25.jpg" alt="iPhones" />
+        </div>
+        <h2>S25 Ultra</h2>
+        <p>
+          Top-tier camera and blazing-fast Android experience with latest
+          Snapdragon Elite.
+        </p>
+        <p>Price: $1199</p>
+        <button class="buybutton">Buy Now</button>
+      </div>
+
+      <div class="product">
+        <div class="img-wrapper">
+          <img class="productimg" src="imgs/pixel.jpg" alt="Macbook" />
+        </div>
+        <h2>Pixel 8 Pro</h2>
+        <p>
+          Pure Android with a brilliant camera system and Google experience.
+        </p>
+        <p>Price: $999</p>
+        <button class="buybutton">Buy Now</button>
+      </div>
+
+      <div class="product">
+        <div class="img-wrapper">
+          <img class="productimg" src="imgs/iphone.jpg" alt="Macbook" />
+        </div>
+        <h2>Iphone 16 Pro</h2>
+        <p>
+          Sleek design, pro camera, and unmatched performance with the best
+          ecosystem.
+        </p>
+        <p>Price: $1199</p>
+        <button class="buybutton">Buy Now</button>
+      </div>
+    </div>
+    <footer>
+      <a href="#">Contact Us</a>
+      <span>|</span>
+      <a href="#">Privacy Policy</a>
+      <span>|</span><a href="#">Terms of use</a>
+      <p>Built by<a class="me" href="https://t.me/Clem_404">#Clem</a></p>
+    </footer>
+  </body>
+</html>
